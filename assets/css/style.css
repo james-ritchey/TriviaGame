@@ -1,0 +1,49 @@
+body {
+    background: #77477E;
+}
+
+.container {
+    width: 80%;
+    margin: 2em auto 0 auto;
+    padding: 2em;
+    background: #03001C;
+    color: #FFC501;
+    text-align: center;
+    font-size: 150%;
+    min-height: calc(100vh - 8em);
+}
+
+#header {
+    color: #FE9600;
+    font-size: 400%;
+    margin-bottom: 0.5em;
+    font-family: 'Creepster', cursive;
+    -webkit-text-stroke: 3px #77477E;
+}
+
+p {
+    margin: 1em;
+}
+
+#content {
+    font-family: 'Mystery Quest', cursive;
+}
+
+li {
+    transition: 0.25s;
+    padding: 0.5em;
+    background: #77477E;
+    font-family: 'Spicy Rice', cursive;
+    width: 30%;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Creepster', cursive;
+    margin: 0.5em;
+}
+
+li:hover {
+    background: #FFC501;
+    color: #77477E;
+}
