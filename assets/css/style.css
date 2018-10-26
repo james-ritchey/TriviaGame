@@ -1,5 +1,5 @@
 body {
-    background: #77477E;
+    background-image: url("../images/background.png");
 }
 
 .container {
@@ -8,6 +8,8 @@ body {
     padding: 2em;
     background: #03001C;
     color: #FFC501;
+    border-radius: 40px;
+    box-shadow: 0 0 100px #03001C;
     text-align: center;
     font-size: 150%;
     min-height: calc(100vh - 8em);
@@ -22,6 +24,7 @@ body {
 }
 
 p {
+    font-size: 120%;
     margin: 1em;
 }
 
@@ -34,8 +37,8 @@ li {
     padding: 0.5em;
     background: #77477E;
     font-family: 'Spicy Rice', cursive;
-    width: 30%;
-    margin: auto;
+    min-width: 30%;
+    margin: 0 auto 0.5em auto;
 }
 
 h2 {
@@ -43,7 +46,12 @@ h2 {
     margin: 0.5em;
 }
 
+#guess-result {
+    display: none;
+}
+
 li:hover {
     background: #FFC501;
     color: #77477E;
 }
+
