@@ -17,19 +17,22 @@
             </div>
 
             <div id="content">
-                <div id="time-question">
-                        <p>Time Remaining: <span id="time">0</span> seconds</p>
-                        <p id="question">What movie is dis</p>
+                <div id="timer">
+                    <p>Time Remaining: <span id="time">0</span> seconds</p>
                 </div>
-                <div id="answers">
+                <div id="question-answers">
+                    <p id="question">Press Start to begin!</p>
                     <ul id="answer-list">
-                        <li>This</li>
-                        <li>That</li>
+                        <li>Start</li>
                     </ul>
                 </div>
                 <div id="guess-result">
-                    <h2>Correct!</h2>
-                    <img src="test.jpg">
+                    <h2 id="result">Correct!</h2>
+                    <img id="movie-img" src="">
+                </div>
+                <div id="score-results">
+                    <p>You answered <span id="score">0</span>/10 correct!</p>
+                    <button type="button" id="retry">Retry?</button>
                 </div>
         </div>
     </body>

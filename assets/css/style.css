@@ -37,17 +37,38 @@ li {
     padding: 0.5em;
     background: #77477E;
     font-family: 'Spicy Rice', cursive;
-    width: 30%;
+    min-width: 30%;
+    max-width: 60%;
     margin: 0 auto 0.5em auto;
 }
 
 h2 {
     font-family: 'Creepster', cursive;
     margin: 0.5em;
+    font-size: 120%;
 }
 
 #guess-result {
     display: none;
+}
+
+#score-results {
+    display: none;
+}
+
+button {
+    background: #77477E;
+    border: none;
+    color: #FE9600;
+    font-family: 'Spicy Rice', cursive;
+    font-size: 150%;
+    padding: 0.25em 0.5em;
+    transition:  0.25s;
+}
+
+button:hover {
+    background: #FFC501;
+    color: #77477E;
 }
 
 li:hover {
@@ -55,3 +76,22 @@ li:hover {
     color: #77477E;
 }
 
+@media only screen and (max-width: 640px) {
+    .container {
+        margin: 2em auto 0 auto;
+        border-radius: 0;
+        padding: 1em;
+        font-size: 125%;
+    }
+
+    #header {
+        font-size: 275%;
+        margin-bottom: 0.5em;
+        font-family: 'Creepster', cursive;
+        -webkit-text-stroke: 3px #77477E;
+    }
+
+    img {
+        width: 100%;
+    }
+}
