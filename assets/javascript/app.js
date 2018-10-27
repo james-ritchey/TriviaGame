@@ -13,7 +13,7 @@ $(document).ready(function(){
         answers: ["The Nightmare Before Christmas", "Monster House", "Frankenweenie", "Corpse Bride"],
         time: 30,
         correctAnswer: "Monster House",
-        image: "assets/images/nmbc.gif",
+        image: "assets/images/monhouse.gif",
     }
 
     var gameManager = {
@@ -21,9 +21,11 @@ $(document).ready(function(){
         currentQuestion: null,
         time: 0,
         intervalId: null,
+        score: 0,
+        questionIndex: 0,
 
         startGame: function() {
-            gameManager.currentQuestion = gameManager.questionArray[0];
+            gameManager.currentQuestion = gameManager.questionArray[gameManager.questionIndex];
             gameManager.time = gameManager.currentQuestion.time;
             $("#time").text(gameManager.time);
             $("#question").text(gameManager.currentQuestion.question);
@@ -37,22 +39,27 @@ $(document).ready(function(){
 
         setTimer: function() {
             clearInterval(gameManager.intervalId);
-            gameManager.intervalId = setInterval(gameManager.decrement(), 1000);
+            gameManager.intervalId = setInterval(gameManager.decrement, 1000);
+
         },
 
         decrement: function() {
             gameManager.time--;
-            $("#time").text(gameManager.time + "");
-            if(gameManager.time <= 0) {gameManager.timeOut();}
+            $("#time").text(gameManager.time);
+            if(gameManager.time < 1){
+                gameManager.timeOut();
+            }
         },
 
         timeOut: function() {
-            clearInterval(gameManager.intervalId);
             gameManager.incorrect();
         },
 
         checkAnswer: function() {
-            if($(this).text() === gameManager.currentQuestion.correctAnswer) {
+            if($(this).text() === "Start") {
+                gameManager.startGame()
+            }
+            else if($(this).text() === gameManager.currentQuestion.correctAnswer) {
                 gameManager.correct();
             }
             else {
@@ -62,11 +69,16 @@ $(document).ready(function(){
         
         incorrect: function() {
             clearInterval(gameManager.intervalId);
-            console.log("wrong boi");
+            gameManager.intervalId = setInterval(gameManager.nextQuestion, 5000);
+            $("#result").text("Sorry, the correct answer was " + gameManager.currentQuestion.correctAnswer + "!");
+            $("#movie-img").attr("src", gameManager.currentQuestion.image);
+            $("#question-answers").css("display", "none");
+            $("#guess-result").css("display", "block");
         },
 
         correct: function() {
             clearInterval(gameManager.intervalId);
+            gameManager.score++;
             gameManager.intervalId = setInterval(gameManager.nextQuestion, 3000);
             $("#result").text("Correct!");
             $("#movie-img").attr("src", gameManager.currentQuestion.image);
@@ -75,7 +87,13 @@ $(document).ready(function(){
         },
 
         nextQuestion: function() {
-            gameManager.currentQuestion = gameManager.questionArray[1];
+            if(gameManager.questionIndex >= gameManager.questionArray.length - 1) {
+                gameManager.endGame();
+            }
+            else {
+                gameManager.questionIndex++;
+            }
+            gameManager.currentQuestion = gameManager.questionArray[gameManager.questionIndex];
             gameManager.time = gameManager.currentQuestion.time;
             $("#time").text(gameManager.time);
             $("#question").text(gameManager.currentQuestion.question);
@@ -87,10 +105,12 @@ $(document).ready(function(){
             gameManager.setTimer();
             $("#question-answers").css("display", "block");
             $("#guess-result").css("display", "none");
+        },
+
+        endGame: function() {
+            console.log("Game ovr");
         }
     }
-
-    gameManager.startGame();
 
     $(document).on("click", "li", gameManager.checkAnswer);
 

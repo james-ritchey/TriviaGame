@@ -38,6 +38,7 @@ li {
     background: #77477E;
     font-family: 'Spicy Rice', cursive;
     min-width: 30%;
+    max-width: 60%;
     margin: 0 auto 0.5em auto;
 }
 
