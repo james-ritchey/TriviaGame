@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     var monhouse = {
         question: "Three friends investigate their spooky neighbor.",
-        answers: ["The Nightmare Before Christmas", "Monster House", "Frankenweenie", "Corpse Bride"],
+        answers: ["The Nightmare Before Christmas", "Halloween Town", "Monster House", "Frankenweenie"],
         time: 20,
         correctAnswer: "Monster House",
         image: "assets/images/monhouse.gif",
@@ -18,7 +18,7 @@ $(document).ready(function(){
 
     var bride = {
         question: "Victor ruins an arranged wedding with a woman from another world.",
-        answers: ["The Nightmare Before Christmas", "Monster House", "Frankenweenie", "Corpse Bride"],
+        answers: ["Corpse Bride", "Monster House", "Frankenweenie", "The Nightmare Before Christmas" ],
         time: 20,
         correctAnswer: "Corpse Bride",
         image: "assets/images/bride.gif",
@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     var weenie = {
         question: "A boy goes to great lengths to bring his pal Sparky back from the dead.",
-        answers: ["The Nightmare Before Christmas", "Monster House", "Frankenweenie", "Corpse Bride"],
+        answers: ["Hocus Pocus", "Frankenweenie", "Monster House", "Corpse Bride"],
         time: 20,
         correctAnswer: "Frankenweenie",
         image: "assets/images/weenie.gif",
@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     var spooky = {
         question: "When her cousin Jimmy scares her to tears on Halloween, Hannah-Marie gets help from an unexpected friend.",
-        answers: ["Scary Godmother", "Monster House", "Frankenweenie", "Corpse Bride"],
+        answers: ["Scary Godmother", "The Addams Family", "Frankenweenie", "Casper"],
         time: 20,
         correctAnswer: "Scary Godmother",
         image: "assets/images/spooky.gif",
@@ -42,7 +42,7 @@ $(document).ready(function(){
 
     var hocus = {
         question: "On Halloween night, Max accidentally frees a coven of children eating witches.",
-        answers: ["The Nightmare Before Christmas", "Monster House", "Hocus Pocus", "Corpse Bride"],
+        answers: ["The Nightmare Before Christmas", "The Haunted Mansion", "Hocus Pocus", "Corpse Bride"],
         time: 20,
         correctAnswer: "Hocus Pocus",
         image: "assets/images/hocus.gif",
@@ -50,7 +50,7 @@ $(document).ready(function(){
 
     var town = {
         question: "Marnie discovers she's a witch and must use her powers to save her new friends.",
-        answers: ["Halloween Town", "Monster House", "Frankenweenie", "Corpse Bride"],
+        answers: ["Halloween Town", "Casper", "Scary Godmother", "Corpse Bride"],
         time: 20,
         correctAnswer: "Halloween Town",
         image: "assets/images/town.gif",
@@ -58,7 +58,7 @@ $(document).ready(function(){
 
     var casper = {
         question: "A man and his daughter move into an abandoned house with four ghosts, one surprisingly friendly.",
-        answers: ["Casper", "Monster House", "Frankenweenie", "Corpse Bride"],
+        answers: ["Casper", "Monster House", "Halloween Town", "Hocus Pocus"],
         time: 20,
         correctAnswer: "Casper",
         image: "assets/images/casper.gif",
@@ -66,7 +66,7 @@ $(document).ready(function(){
 
     var mansion = {
         question: "A workaholic real estate agent takes his family on a vacation, and winds up being asked to help break a curse.",
-        answers: ["The Haunted Mansion", "Monster House", "Frankenweenie", "Corpse Bride"],
+        answers: ["The Haunted Mansion", "Hocus Pocus", "The Nightmare Before Christmas", "Casper"],
         time: 20,
         correctAnswer: "The Haunted Mansion",
         image: "assets/images/mansion.gif",
